@@ -1,15 +1,19 @@
 pipeline { 
-  
    agent any
-
+   tools{
+     nodejs 'nodejs'
+   }
    stages {
-   
-     stage('Install Dependencies') { 
+     stage('scm') { 
         steps { 
            checkout scm
         }
      }
-     
+     stage('npm') {    
+       steps{
+         sh 'npm install'
+       }
+     }
      stage('Test') {
         steps { 
            sh 'echo "testing application..."'
@@ -23,6 +27,5 @@ pipeline {
 
      }
   
-   	}
-
    }
+}
