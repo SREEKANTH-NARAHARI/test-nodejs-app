@@ -1,9 +1,9 @@
 pipeline { 
+   agent any
    tools{
      nodejs 'nodejs'
    }
-   agent any
-
+   
    stages {
    
      stage('scm') { 
@@ -12,7 +12,7 @@ pipeline {
         }
      }
     
-     stage('npm'){    
+     stage('npm') {    
        steps{
          sh 'npm install'
        }
