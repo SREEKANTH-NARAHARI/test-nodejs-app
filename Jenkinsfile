@@ -8,8 +8,7 @@ pipeline {
         steps { 
            checkout scm
         }
-     }
-    
+     }  
      stage('npm') {    
        steps{
          sh 'npm install'
@@ -30,3 +29,4 @@ pipeline {
      }
   
    }
+}
