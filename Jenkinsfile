@@ -1,12 +1,14 @@
-pipeline { 
-  
+pipeline {  
    agent any
+   tools{
+    nodejs 'nodejs'
+   }
 
    stages {
    
      stage('Install Dependencies') { 
         steps { 
-           checkout scm
+           git 'https://github.com/SREEKANTH-NARAHARI/test-nodejs-app.git'
         }
      }
      
