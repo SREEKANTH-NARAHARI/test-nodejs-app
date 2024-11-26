@@ -8,7 +8,7 @@ pipeline {
    
      stage('Install Dependencies') { 
         steps { 
-           scm
+           echo 'git fetch'
         }
      }
      
