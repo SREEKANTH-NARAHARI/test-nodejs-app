@@ -6,7 +6,7 @@ pipeline {
    stages {
      stage('scm') { 
         steps { 
-           checkout scm
+           git 'https://github.com/SREEKANTH-NARAHARI/test-nodejs-app.git'
         }
      }
      stage('npm') {    
