@@ -6,7 +6,7 @@ pipeline {
    stages {
      stage('scm') { 
         steps { 
-           scm
+           echo 'fetch git'
         }
      }
      stage('npm') {    
