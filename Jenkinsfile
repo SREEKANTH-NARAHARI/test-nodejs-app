@@ -3,7 +3,7 @@ pipeline {
    tools{
      nodejs 'nodejs'
    } 
-   stages {
+   stages{
      stage('scm') { 
         steps { 
            echo 'fetch scm'
