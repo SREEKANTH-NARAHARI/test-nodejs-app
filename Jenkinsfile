@@ -8,7 +8,7 @@ pipeline {
    
      stage('Install Dependencies') { 
         steps { 
-           git 'https://github.com/SREEKANTH-NARAHARI/test-nodejs-app.git'
+           git credentialsId: '7df1c285-641c-4981-bd73-dda219b9e700', url: 'https://github.com/SREEKANTH-NARAHARI/test-nodejs-app.git'
         }
      }
      
